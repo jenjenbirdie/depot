@@ -16,29 +16,20 @@
   </div>
   <div id="columns">
     <div id="side">
-<<<<<<< HEAD
-<<<<<<< HEAD
-	  <div id="cart">
-		<%= render @cart %>
-	  </div>
-=======
-=======
->>>>>>> dash-of-ajax
       <!-- START_HIGHLIGHT -->
       <!-- START:hidden_div -->
-	  <% if @cart %>
-		  <%= hidden_div_if(@cart.line_items.empty?, :id => "cart") do %>
-			<%= render @cart %>
-		  <% end %>
-	  <% end %>
+<!-- START_HIGHLIGHT -->
+      <% if @cart %>
+<!-- END_HIGHLIGHT -->
+        <%= hidden_div_if(@cart.line_items.empty?, :id => "cart") do %>
+          <%= render @cart %>
+        <% end %>
+<!-- START_HIGHLIGHT -->
+      <% end %>
+<!-- END_HIGHLIGHT -->
     <!-- END:hidden_div -->
       <!-- END_HIGHLIGHT -->
 
-
-<<<<<<< HEAD
->>>>>>> dash-of-ajax
-=======
->>>>>>> dash-of-ajax
       <a href="http://www....">Home</a><br />
       <a href="http://www..../faq">Questions</a><br />
       <a href="http://www..../news">News</a><br />
@@ -50,4 +41,3 @@
   </div>
 </body>
 </html>
-
