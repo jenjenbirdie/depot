@@ -22,5 +22,20 @@ Depot::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+  
+  # added 06/03/2011
+  config.action_mailer.delivery_method = :smtp
+  # New Gmail SMTP server setup
+  # ActionMailer::Base.smtp_settings = {    
+  config.action_mailer.smtp_settings = {
+	:address => "smtp.gmail.com",    
+	:enable_starttls_auto => true,    
+	:port => 587,   
+	:domain => "gmail.com",
+	:authentication => "plain",    
+	:user_name => "jennifer.birdie@gmail.com",    
+	:password => 'un!c0rn@w0rkh@rd2',
+	:enable_starttls_auto => true
+	} 
 end
 
